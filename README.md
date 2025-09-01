@@ -36,5 +36,29 @@ Start the FastAPI server:
 uvicorn main:app --reload
 ```
 
+## Example
+
+### Example Request
+
+```bash
+curl -X POST "http://127.0.0.1:8000/upload" \
+     -F "file=@test.png" \
+     -F "lang=tur"
+```
+
+### Example Picture
+
+![Example OCR Image](example.png)
+
+### Example Output
+
+```json
+{
+    "filename": "495d3933-5715-4a29-829d-edaabd112b16_figure-65.png",
+    "text": "It was the best of\ntimes, it was the worst\nof times, it was the age\nof wisdom, it was the\nage of foolishness...",
+    "lang": "eng"
+}
+```
+
 ## Next Steps
 - Supabase integration
